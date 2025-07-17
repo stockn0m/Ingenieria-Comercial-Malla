@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular Interactiva</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f0f5;
+      margin: 0;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .btn-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .btn {
+      padding: 12px 25px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      background-color: #3a86ff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #265dd8;
+    }
+    .seccion {
+      display: none;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .semestre {
+      background-color: #e6f0ff;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Malla Curricular Interactiva</h1>
+  <p style="text-align:center;">Selecciona tu especialidad para ver los cursos por semestre.</p>
+
+  <div class="btn-container">
+    <button class="btn" onclick="mostrarEspecialidad('admin')">Especialidad en Administración</button>
+    <button class="btn" onclick="mostrarEspecialidad('eco')">Especialidad en Economía</button>
+  </div>
+
+  <!-- ADMINISTRACIÓN -->
+  <div id="admin" class="seccion">
+    <h2>📘 Administración de Empresas</h2>
+    <div class="semestre"><strong>Primer semestre:</strong> Introducción a la Economía, Gestión y Empresa, Inglés I</div>
+    <div class="semestre"><strong>Segundo semestre:</strong> Introducción a la Microeconomía, Contabilidad, Inglés II</div>
+    <div class="semestre"><strong>Tercer semestre:</strong> Introducción al Pensamiento Económico y Político, Inglés III, Comunicación I, Negocios I, Contabilidad Empresarial I</div>
+    <div class="semestre"><strong>Cuarto semestre:</strong> Inglés IV, Economía Aplicada, Introducción al Marketing, Introducción a las Finanzas, Comunicación II</div>
+    <div class="semestre"><strong>Quinto semestre:</strong> Negocios II, Finanzas I, Marketing I, Contabilidad Empresarial II, Taller de Negocios</div>
+    <div class="semestre"><strong>Sexto semestre:</strong> Electivos sociales y libres, Estadística I y II, Tecnología y Sistemas, Aplicaciones de Datos</div>
+    <div class="semestre"><strong>Séptimo y Octavo semestre:</strong> Talleres prácticos, Electivos de Profundización, Finanzas II, Marketing II, Gestión de Personas I y II</div>
+    <div class="semestre"><strong>Noveno y Décimo semestre:</strong> Electivos Magíster/Profesional y Práctica Profesional</div>
+  </div>
+
+  <!-- ECONOMÍA -->
+  <div id="eco" class="seccion">
+    <h2>📊 Licenciatura en Economía</h2>
+    <div class="semestre"><strong>Primer semestre:</strong> Introducción a la Economía, Gestión y Empresa, Métodos Matemáticos I, Inglés I</div>
+    <div class="semestre"><strong>Segundo semestre:</strong> Introducción a la Microeconomía, Contabilidad, Métodos Matemáticos II, Inglés II</div>
+    <div class="semestre"><strong>Tercer semestre:</strong> Pensamiento Económico y Político, Introducción a la Macroeconomía, Gestión de Personas, Aplicaciones de Datos, Métodos Matemáticos III, Inglés III, Comunicación I</div>
+    <div class="semestre"><strong>Cuarto semestre:</strong> Microeconomía I, Macroeconomía I, Métodos Cuantitativos I, Historia Económica, Inglés IV, Economía Aplicada, Marketing, Estadística II, Métodos Matemáticos IV, Comunicación II</div>
+    <div class="semestre"><strong>Quinto semestre:</strong> Micro y Macro II, Métodos Cuantitativos II, Taller de Política Pública, Electivos libres y de entorno</div>
+    <div class="semestre"><strong>Sexto y Séptimo semestre:</strong> Micro y Macro III y IV, Electivos de profundización, Tecnología y Sistemas, Finanzas</div>
+    <div class="semestre"><strong>Noveno y Décimo semestre:</strong> Electivos Magíster/Profesional o Práctica Profesional</div>
+  </div>
+
+  <script>
+    function mostrarEspecialidad(tipo) {
+      document.getElementById("admin").style.display = tipo === "admin" ? "block" : "none";
+      document.getElementById("eco").style.display = tipo === "eco" ? "block" : "none";
+    }
+  </script>
+
+</body>
+</html>
